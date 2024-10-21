@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Card</title>
+    
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e0e7f1;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    width: 300px; /* Default width */
+    padding: 20px;
+    transition: width 0.3s ease;
+}
+
+.qr-code img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.card-content h2 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Mobile (375px width) */
+@media (max-width: 375px) {
+    .card {
+        width: 275px; /* Slightly smaller width for mobile */
+        padding: 15px;
+    }
+
+    .qr-code img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .card-content h2 {
+        font-size: 1.1em;
+    }
+
+    .card-content p {
+        font-size: 0.85em;
+    }
+}
+
+/* Desktop (1440px width and above) */
+@media (min-width: 1440px) {
+    body {
+        background-color: #f0f4fb; /* A lighter background color for desktop */
+    }
+
+    .card {
+        width: 400px; /* Larger width for desktop */
+    }
+
+    .qr-code img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .card-content h2 {
+        font-size: 1.4em;
+    }
+
+    .card-content p {
+        font-size: 1em;
+    }
+}
+
+
+
+</style>
+<body>
+    <div class="card-container">
+        <div class="card">
+            <div class="qr-code">
+                <img src="image-qr-code.png" alt="">
+            </div>
+            <div class="card-content">
+                <h2>Improve your front-end skills by building projects</h2>
+                <p>Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
